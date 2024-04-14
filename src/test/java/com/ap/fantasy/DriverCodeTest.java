@@ -16,4 +16,8 @@ class DriverCodeTest {
     void pastMatch() throws MalformedURLException, InterruptedException {
         driverCode.pastMatch();
     }
+    @Test
+    void normalFlow() throws MalformedURLException, InterruptedException {
+        driverCode.normalFlow();
+    }
 }

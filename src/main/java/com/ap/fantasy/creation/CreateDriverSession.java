@@ -17,7 +17,7 @@ public class CreateDriverSession {
     }
     public static AndroidDriver<AndroidElement> getDriver(String udid, int port) throws MalformedURLException {
         if(udid.isBlank()){
-            udid = Udid.R5CT31D3G4F.name();
+            udid = "34061JEHN01581";
         }
         if(port==0){
             port = 4723;

@@ -50,9 +50,13 @@ public class FirstPage {
         }
         return matches;
     }
-
-    public static List<MatchDetails> readMatches(AppiumDriver<AndroidElement> driver) throws InterruptedException, MalformedURLException {
+    public static List<MatchDetails> goToMatch(AndroidDriver<AndroidElement> driver, String team) throws InterruptedException, MalformedURLException {
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+team+"\"))").click();
         return travelMatches(driver,null);
+    }
+
+    public static List<MatchDetails> readMatches(AndroidDriver<AndroidElement> driver) throws InterruptedException, MalformedURLException {
+        return goToMatch(driver,"pbks");
     }
 
     public static MatchDetails getIntoMatch(AppiumDriver<AndroidElement> driver, MatchDetails nextMatch) throws InterruptedException, MalformedURLException {
